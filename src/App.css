@@ -1,0 +1,329 @@
+body{
+  position: relative;
+}
+
+.logoImg{
+  position: relative;
+  z-index: 100;
+}
+
+.container{
+  width: auto;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.primary-text{
+  color: yellow;
+}
+
+.text-white{
+  color: white;
+}
+
+button{
+  padding:10px 20px;
+  border-radius: 20px;
+  background-color: yellow;
+  max-height: 35px;
+}
+
+button:hover{
+  background-color: gray;
+  color: white;
+}
+
+/* banner start */
+
+.banner-image{
+  height: 250px;
+  width: 250px;
+  position: relative;
+  display: block;
+  top: 0;
+  right: 0;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.banner-header{
+  position: relative;
+}
+
+/* banner end */
+
+
+
+
+
+
+/* nav-menu start*/
+nav .nav-menu{
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  margin: auto;
+  align-items: center;
+  padding: 20px;
+}
+
+nav .nav-menu ul{
+  display: none;
+  list-style-type: none;
+  gap: 20px;
+}
+
+nav .nav-menu a{
+  text-decoration: none;
+  color: black;
+}
+
+/* nav-menu end */
+
+
+
+
+/* mobile-menu start */
+
+nav .mobile-menu{
+ display: flex;
+ flex-direction: column;
+ gap: 5px;
+ z-index: 100;
+}
+
+
+nav .mobile-menu .bar{
+  display: block;
+  background-color: black;
+  width: 40px;
+  height: 5px;
+}
+
+nav .mobile-menu.visible .bar:nth-child(2){
+  display: none;
+  /* background-color: yellow; */
+}
+
+nav .mobile-menu.visible .bar:first-child{
+  /* background-color: red; */
+  transform: rotateZ(45deg) translate(7px, 0px);
+  transition: ease-in-out;
+}
+
+nav .mobile-menu.visible .bar:last-child{
+  transform: rotateZ(-45deg) translate(6px, 0px);
+  transition: ease-in-out;
+}
+
+
+nav .mobile-menu .mobile-menu.visible{
+  display: block;
+  width: 100%;
+  height: 100dvh;
+  background-color: gray;
+}
+
+nav ul.visible{
+  background-color: gray;
+}
+/* mobile-menu end */
+
+nav .mobile-link{
+  display: none;
+}
+
+nav .mobile-link.visible{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  display: block;
+  background-color: gray;
+  height: 95dvh;
+  opacity: 50%;
+}
+
+nav .mobile-link.visible ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  margin:0px;
+}
+
+nav .mobile-link.visible ul a {
+  color: white;
+}
+
+/* header start */
+
+header{
+  height: fit-content;
+  background-color:darkcyan;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+header .container h1,
+header .container h2,
+header .container p{
+  max-width: 500px;
+}
+
+
+
+/* header end */
+
+
+/* footer start */
+
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+footer .logo-content{
+  max-width: 300px;
+}
+
+footer ul{
+  list-style-type:none;
+  padding-left: 0px;
+}
+
+footer a{
+  text-decoration: none;
+}
+
+footer h3{
+  margin-top: 0px;
+}
+
+
+/* footer end */
+
+/* recipes-menu start */
+.recipes-menu{
+  padding-top: 150px;
+  padding-bottom: 30px;
+}
+
+.recipes-menu .title{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recipes-menu .card{
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.recipes-menu .card .card-content{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: darkcyan;
+  border-radius: 10px;
+  height: 600px;
+}
+
+.recipes-menu .card .card-content .card-image{
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.recipes-menu .card .card-content .card-text{
+  max-width: 200px;
+  margin: auto;
+  margin-top: 0px;
+}
+
+
+
+/* recipes-menu end */
+
+
+@media screen and (min-width:768px) {
+  nav .mobile-menu{
+    display: none;
+  }
+
+  nav .nav-menu{
+    width: 700px;
+  }
+
+  .container{
+    width: 700px;
+  }
+
+  nav .nav-menu ul{
+    display: flex;
+  }
+
+  nav .mobile-link.visible{
+    display: none;
+  }
+
+  .banner-image{
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0px;
+  }
+
+  header .container h1,
+  header .container h2,
+  header .container p{
+  max-width: 300px;
+}
+
+
+
+.recipes-menu .card .card-content .card-image{
+  width: 400px;
+  height: 300px;
+}
+
+.recipes-menu .card .card-content .card-text{
+  max-width: 350px;
+}
+
+.recipes-menu .card .card-content .card-text .price{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+}
+
+@media screen and (min-width:1440px) {
+  nav .nav-menu{
+    width: 1280px;
+  }
+
+  .container{
+    width: 1280px;
+  }
+
+  header .container h1,
+  header .container h2,
+  header .container p{
+  max-width: 500px;
+}
+
+}
+
